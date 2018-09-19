@@ -8,7 +8,7 @@
 import scrapy
 
 
-class TodayMovieItem(scrapy.Item):
+class WeiboHotItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    hot_name = scrapy.Field() # hot name

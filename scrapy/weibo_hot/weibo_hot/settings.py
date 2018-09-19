@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for today_movie project
+# Scrapy settings for weibo_hot project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'today_movie'
+BOT_NAME = 'weibo_hot'
 
-SPIDER_MODULES = ['today_movie.spiders']
-NEWSPIDER_MODULE = 'today_movie.spiders'
+SPIDER_MODULES = ['weibo_hot.spiders']
+NEWSPIDER_MODULE = 'weibo_hot.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'today_movie (+http://www.yourdomain.com)'
+#USER_AGENT = 'weibo_hot (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'today_movie.middlewares.TodayMovieSpiderMiddleware': 543,
+#    'weibo_hot.middlewares.WeiboHotSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'today_movie.middlewares.TodayMovieDownloaderMiddleware': 543,
+#    'weibo_hot.middlewares.WeiboHotDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'today_movie.pipelines.TodayMoviePipeline': 300,
+#    'weibo_hot.pipelines.WeiboHotPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
