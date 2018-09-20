@@ -10,8 +10,9 @@ from datetime import datetime
 
 class WeiboHotPipeline(object):
     def process_item(self, item, spider):
-        now = datetime.strftime('%Y-%m-%d %H:%M:%S', datetime.now)
-        file_name = 'weibo_hot_' + now + '.txt'
+        now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
+        file_name = './weibo_hot_' + now + '.txt'
+        print('eldon:', file_name, item)
         with open(file_name, 'a') as fp:
-            fp.write(item['weibo_hot'][0].encode('utf8') + '\n\n')
+            fp.write(item['hot_title'].encode('utf8') + '\n\n')
         return item

@@ -6,13 +6,16 @@ from weibo_hot.items import WeiboHotItem
 class WeiboHotSpider(scrapy.Spider):
     name = 'weibo_hot_spider'
     allowed_domains = ['weibo.com']
-    start_urls = ['https://weibo.com/a/hot/realtime']
+    start_urls = ['https://weibo.com/login.php']
 
     def parse(self, response):
-        selector = response.xpath('//div[@class="list_title_b"]')
+        selector = response.xpath('//div[@class="footer_link clearfix"]')
         items = []
         for sub_selector in selector:
-            item = WeiboHotItem()
-            item['hot_name'] = sub_selector.xpath('./a/text()').extract()
-            items.append(item)
+            dt_selector = sub_selector.xpath('./dl/dt/text()')
+            for dt_s in dt_selector:
+                item = WeiboHotItem()
+                item['hot_title'] = dt_s.extract()
+                items.append(item)
+                print(item)
         return items

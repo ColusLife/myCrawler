@@ -11,4 +11,4 @@ import scrapy
 class WeiboHotItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    hot_name = scrapy.Field() # hot name
+    hot_title = scrapy.Field() # hot title
